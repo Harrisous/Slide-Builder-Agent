@@ -1,0 +1,175 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Presentation Deck</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        primary: 'var(--primary)',
+                        secondary: 'var(--secondary)',
+                    },
+                    fontFamily: {
+                        base: 'var(--font-base)',
+                    }
+                }
+            }
+        }
+    </script>
+    <style>
+        :root {
+            --primary: {
+                    {
+                    theme.primary_color
+                }
+            }
+
+            ;
+
+            --secondary: {
+                    {
+                    theme.secondary_color
+                }
+            }
+
+            ;
+
+            --font-base: {
+                    {
+                    theme.font_family
+                }
+            }
+
+            ;
+        }
+
+        body {
+            font-family: var(--font-base);
+            background-color: #e5e5e5;
+            /* Neutral background for the "desk" view */
+            margin: 0;
+            padding: 20px;
+        }
+
+        .slide-container {
+            width: 1280px;
+            min-height: 720px;
+            /* Changed from fixed height to min-height */
+            height: auto;
+            /* Allow growth */
+            background: white;
+            margin: 0 auto 40px auto;
+            position: relative;
+            /* overflow: hidden; Removed to prevent clipping */
+            box-shadow: 0 10px 25px -5px rgba(0, 0, 0, 0.1), 0 8px 10px -6px rgba(0, 0, 0, 0.1);
+            display: flex;
+            flex-direction: column;
+        }
+
+        .nav-active {
+            color: var(--primary);
+            border-bottom: 3px solid var(--primary);
+            font-weight: 800;
+        }
+
+        sup {
+            font-size: 0.6em;
+            vertical-align: super;
+            color: #666;
+        }
+    </style>
+</head>
+
+<body>
+
+    {% for slide in slides %}
+    <div class="slide-container" id="slide-{{ loop.index }}">
+        <!-- Navbar -->
+        <div class="w-full bg-white border-b border-gray-200 px-8 py-4 flex items-center justify-between shrink-0">
+            <div class="flex items-center gap-6 overflow-x-auto no-scrollbar">
+                <!-- Logo -->
+                <img src="https://www.fruzaqlahcp.com/sites/default/files/2024-04/fruzaqla_logo_r_rgb.png"
+                    alt="Brand Logo" class="h-10 mr-4">
+
+                <!-- Nav Tabs -->
+                {% for tab in navbar_tabs %}
+                <div
+                    class="whitespace-nowrap uppercase text-sm cursor-pointer px-3 py-1 text-secondary {{ 'nav-active' if tab == slide.nav_label else 'opacity-70 hover:opacity-100' }}">
+                    {{ tab }}
+                </div>
+                {% endfor %}
+            </div>
+            <div class="text-xs text-gray-400 font-mono">SLIDE {{ loop.index }}</div>
+        </div>
+
+        <!-- Slide Content Area -->
+        <div class="flex-1 p-10 flex flex-col gap-6">
+
+            <!-- Header -->
+            <div class="shrink-0">
+                <h3 class="text-primary text-sm font-bold tracking-widest uppercase mb-1">{{ slide.subhead }}</h3>
+                <h1 class="text-secondary text-4xl font-extrabold leading-tight w-3/4">{{ slide.headline }}</h1>
+            </div>
+
+            <!-- Content Grid (Dynamic Layout) -->
+            <div class="flex-1 grid gap-8 {{ slide.layout_class }}">
+
+                {% for block in slide.content_blocks %}
+                <div class="{{ block.col_span_class }} flex flex-col gap-4">
+
+                    {% if block.type == 'text' %}
+                    <div
+                        class="bg-white p-6 rounded-xl border border-gray-100 shadow-sm h-full flex flex-col justify-center">
+                        <div class="prose prose-lg text-gray-700 leading-snug">
+                            {{ block.content | safe }}
+                        </div>
+                    </div>
+
+                    {% elif block.type == 'image' %}
+                    <div
+                        class="h-full w-full flex items-center justify-center bg-gray-50 rounded-xl overflow-hidden relative border border-gray-100">
+                        <img src="{{ block.url }}" alt="Visual" class="max-h-full max-w-full object-contain">
+                    </div>
+                    {% if block.caption %}
+                    <p class="text-xs text-gray-500 mt-1 italic text-center">{{ block.caption }}</p>
+                    {% endif %}
+
+                    {% elif block.type == 'list' %}
+                    <div class="bg-white p-6 rounded-xl border border-gray-100 shadow-sm h-full">
+                        <ul class="space-y-3">
+                            {% for item in block['items'] %}
+                            <li class="flex items-start gap-3">
+                                <span class="text-primary mt-1.5">•</span>
+                                <span class="text-gray-800 text-lg">{{ item | safe }}</span>
+                            </li>
+                            {% endfor %}
+                        </ul>
+                    </div>
+                    {% endif %}
+
+                </div>
+                {% endfor %}
+
+            </div>
+
+            <!-- Footer/References -->
+            {% if slide.references %}
+            <div class="shrink-0 border-t border-gray-100 pt-3 mt-auto">
+                <p class="text-[10px] text-gray-400">
+                    References: {{ slide.references }}
+                </p>
+            </div>
+            {% endif %}
+
+        </div>
+    </div>
+    {% endfor %}
+
+</body>
+
+</html>

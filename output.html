@@ -1,0 +1,829 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Presentation Deck</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        primary: 'var(--primary)',
+                        secondary: 'var(--secondary)',
+                    },
+                    fontFamily: {
+                        base: 'var(--font-base)',
+                    }
+                }
+            }
+        }
+    </script>
+    <style>
+        :root {
+            --primary: {
+                    {
+                    theme.primary_color
+                }
+            }
+
+            ;
+
+            --secondary: {
+                    {
+                    theme.secondary_color
+                }
+            }
+
+            ;
+
+            --font-base: {
+                    {
+                    theme.font_family
+                }
+            }
+
+            ;
+        }
+
+        body {
+            font-family: var(--font-base);
+            background-color: #e5e5e5;
+            /* Neutral background for the "desk" view */
+            margin: 0;
+            padding: 20px;
+        }
+
+        .slide-container {
+            width: 1280px;
+            min-height: 720px;
+            /* Changed from fixed height to min-height */
+            height: auto;
+            /* Allow growth */
+            background: white;
+            margin: 0 auto 40px auto;
+            position: relative;
+            /* overflow: hidden; Removed to prevent clipping */
+            box-shadow: 0 10px 25px -5px rgba(0, 0, 0, 0.1), 0 8px 10px -6px rgba(0, 0, 0, 0.1);
+            display: flex;
+            flex-direction: column;
+        }
+
+        .nav-active {
+            color: var(--primary);
+            border-bottom: 3px solid var(--primary);
+            font-weight: 800;
+        }
+
+        sup {
+            font-size: 0.6em;
+            vertical-align: super;
+            color: #666;
+        }
+    </style>
+</head>
+
+<body>
+
+    
+    <div class="slide-container" id="slide-1">
+        <!-- Navbar -->
+        <div class="w-full bg-white border-b border-gray-200 px-8 py-4 flex items-center justify-between shrink-0">
+            <div class="flex items-center gap-6 overflow-x-auto no-scrollbar">
+                <!-- Logo -->
+                <img src="https://www.fruzaqlahcp.com/sites/default/files/2024-04/fruzaqla_logo_r_rgb.png"
+                    alt="Brand Logo" class="h-10 mr-4">
+
+                <!-- Nav Tabs -->
+                
+                <div
+                    class="whitespace-nowrap uppercase text-sm cursor-pointer px-3 py-1 text-secondary nav-active">
+                    MOA
+                </div>
+                
+                <div
+                    class="whitespace-nowrap uppercase text-sm cursor-pointer px-3 py-1 text-secondary opacity-70 hover:opacity-100">
+                    STUDY DESIGN
+                </div>
+                
+                <div
+                    class="whitespace-nowrap uppercase text-sm cursor-pointer px-3 py-1 text-secondary opacity-70 hover:opacity-100">
+                    EFFICACY
+                </div>
+                
+                <div
+                    class="whitespace-nowrap uppercase text-sm cursor-pointer px-3 py-1 text-secondary opacity-70 hover:opacity-100">
+                    SAFETY
+                </div>
+                
+                <div
+                    class="whitespace-nowrap uppercase text-sm cursor-pointer px-3 py-1 text-secondary opacity-70 hover:opacity-100">
+                    DOSING
+                </div>
+                
+            </div>
+            <div class="text-xs text-gray-400 font-mono">SLIDE 1</div>
+        </div>
+
+        <!-- Slide Content Area -->
+        <div class="flex-1 p-10 flex flex-col gap-6">
+
+            <!-- Header -->
+            <div class="shrink-0">
+                <h3 class="text-primary text-sm font-bold tracking-widest uppercase mb-1">MECHANISM OF ACTION OVERVIEW (LATER‑LINE mCRC)</h3>
+                <h1 class="text-secondary text-4xl font-extrabold leading-tight w-3/4">SELECTIVE VEGFR-1/2/3 INHIBITION DRIVES SUSTAINED ANTI‑ANGIOGENIC ACTIVITY</h1>
+            </div>
+
+            <!-- Content Grid (Dynamic Layout) -->
+            <div class="flex-1 grid gap-8 grid-cols-2">
+
+                
+                <div class="col-span-1 flex flex-col gap-4">
+
+                    
+                    <div
+                        class="bg-white p-6 rounded-xl border border-gray-100 shadow-sm h-full flex flex-col justify-center">
+                        <div class="prose prose-lg text-gray-700 leading-snug">
+                            <p><b>FRUZAQLA (fruquintinib)</b> is an <b>oral</b> small‑molecule kinase inhibitor of <b>VEGFR‑1, VEGFR‑2, and VEGFR‑3</b>.<sup>1–3</sup></p><p>It is described as a <b>novel, selective inhibitor of all 3 VEGF receptors</b> with <b>limited off‑target kinase activity</b>, enabling drug exposure that supports <b>sustained target inhibition</b>.<sup>1–3,13*</sup></p>
+                        </div>
+                    </div>
+
+                    
+
+                </div>
+                
+                <div class="col-span-1 flex flex-col gap-4">
+
+                    
+                    <div class="bg-white p-6 rounded-xl border border-gray-100 shadow-sm h-full">
+                        <ul class="space-y-3">
+                            
+                            <li class="flex items-start gap-3">
+                                <span class="text-primary mt-1.5">•</span>
+                                <span class="text-gray-800 text-lg">Limits off‑target kinase activity, allowing for **high drug exposure** and **sustained target inhibition**.¹³</span>
+                            </li>
+                            
+                            <li class="flex items-start gap-3">
+                                <span class="text-primary mt-1.5">•</span>
+                                <span class="text-gray-800 text-lg">Anti‑angiogenic mechanism: **restricts tumor growth and progression (VEGFR‑1/‑2)**.¹³,¹⁶</span>
+                            </li>
+                            
+                            <li class="flex items-start gap-3">
+                                <span class="text-primary mt-1.5">•</span>
+                                <span class="text-gray-800 text-lg">Potential to inhibit **lymphangiogenesis (VEGFR‑3)**.¹³,¹⁷</span>
+                            </li>
+                            
+                        </ul>
+                    </div>
+                    
+
+                </div>
+                
+                <div class="col-span-1 flex flex-col gap-4">
+
+                    
+                    <div
+                        class="h-full w-full flex items-center justify-center bg-gray-50 rounded-xl overflow-hidden relative border border-gray-100">
+                        <img src="https://solstice-public-forever.s3.us-east-1.amazonaws.com/9729d2c2-cbd8-41ec-a2e3-ca756068844e/711aa3f2-ba1d-44e5-bdb4-4f5333bc6ef8.png" alt="Visual" class="max-h-full max-w-full object-contain">
+                    </div>
+                    
+                    <p class="text-xs text-gray-500 mt-1 italic text-center">Kinome/VEGFR selectivity visualization (source figure).</p>
+                    
+
+                    
+
+                </div>
+                
+                <div class="col-span-1 flex flex-col gap-4">
+
+                    
+                    <div
+                        class="bg-white p-6 rounded-xl border border-gray-100 shadow-sm h-full flex flex-col justify-center">
+                        <div class="prose prose-lg text-gray-700 leading-snug">
+                            <p>By focusing inhibition on <b>VEGFR‑1/2/3</b> with <b>limited off‑target activity</b>, FRUZAQLA is positioned to support an anti‑angiogenic approach that aligns with later‑line mCRC goals: <b>durable disease control with tolerability</b> and a <b>clinically manageable safety profile</b> consistent with selective targeting as described in the cited materials.<sup>1–3,13</sup></p><p><i>Note:</i> Preclinical activity does not necessarily correlate with clinical outcomes.<sup>Source disclaimer</sup></p>
+                        </div>
+                    </div>
+
+                    
+
+                </div>
+                
+
+            </div>
+
+            <!-- Footer/References -->
+            
+            <div class="shrink-0 border-t border-gray-100 pt-3 mt-auto">
+                <p class="text-[10px] text-gray-400">
+                    References: 1–3*, 12, 13–17. *As cited in source materials. Preclinical activity does not necessarily correlate with clinical outcomes.
+                </p>
+            </div>
+            
+
+        </div>
+    </div>
+    
+    <div class="slide-container" id="slide-2">
+        <!-- Navbar -->
+        <div class="w-full bg-white border-b border-gray-200 px-8 py-4 flex items-center justify-between shrink-0">
+            <div class="flex items-center gap-6 overflow-x-auto no-scrollbar">
+                <!-- Logo -->
+                <img src="https://www.fruzaqlahcp.com/sites/default/files/2024-04/fruzaqla_logo_r_rgb.png"
+                    alt="Brand Logo" class="h-10 mr-4">
+
+                <!-- Nav Tabs -->
+                
+                <div
+                    class="whitespace-nowrap uppercase text-sm cursor-pointer px-3 py-1 text-secondary opacity-70 hover:opacity-100">
+                    MOA
+                </div>
+                
+                <div
+                    class="whitespace-nowrap uppercase text-sm cursor-pointer px-3 py-1 text-secondary nav-active">
+                    STUDY DESIGN
+                </div>
+                
+                <div
+                    class="whitespace-nowrap uppercase text-sm cursor-pointer px-3 py-1 text-secondary opacity-70 hover:opacity-100">
+                    EFFICACY
+                </div>
+                
+                <div
+                    class="whitespace-nowrap uppercase text-sm cursor-pointer px-3 py-1 text-secondary opacity-70 hover:opacity-100">
+                    SAFETY
+                </div>
+                
+                <div
+                    class="whitespace-nowrap uppercase text-sm cursor-pointer px-3 py-1 text-secondary opacity-70 hover:opacity-100">
+                    DOSING
+                </div>
+                
+            </div>
+            <div class="text-xs text-gray-400 font-mono">SLIDE 2</div>
+        </div>
+
+        <!-- Slide Content Area -->
+        <div class="flex-1 p-10 flex flex-col gap-6">
+
+            <!-- Header -->
+            <div class="shrink-0">
+                <h3 class="text-primary text-sm font-bold tracking-widest uppercase mb-1">TRIAL DESIGN & METHODS (FRESCO)</h3>
+                <h1 class="text-secondary text-4xl font-extrabold leading-tight w-3/4">FRESCO CONFIRMS OS AS THE PRIMARY ENDPOINT IN A RANDOMIZED, DOUBLE-BLIND PHASE 3 mCRC TRIAL</h1>
+            </div>
+
+            <!-- Content Grid (Dynamic Layout) -->
+            <div class="flex-1 grid gap-8 grid-cols-2">
+
+                
+                <div class="col-span-1 flex flex-col gap-4">
+
+                    
+                    <div
+                        class="bg-white p-6 rounded-xl border border-gray-100 shadow-sm h-full flex flex-col justify-center">
+                        <div class="prose prose-lg text-gray-700 leading-snug">
+                            <p><b>Phase 3</b>, multicenter, <b>randomized (2:1)</b>, <b>double-blind</b>, <b>placebo-controlled</b> trial conducted in a <b>single country (China)</b>.<sup>1,2</sup></p>
+                        </div>
+                    </div>
+
+                    
+
+                </div>
+                
+                <div class="col-span-1 flex flex-col gap-4">
+
+                    
+                    <div
+                        class="h-full w-full flex items-center justify-center bg-gray-50 rounded-xl overflow-hidden relative border border-gray-100">
+                        <img src="https://solstice-public-forever.s3.us-east-1.amazonaws.com/d57e0f2f-44bc-4274-9f70-c99f017a9ec1/8a6f88df-7253-4f3c-9215-c7d04c967c73.png" alt="Visual" class="max-h-full max-w-full object-contain">
+                    </div>
+                    
+                    <p class="text-xs text-gray-500 mt-1 italic text-center">Compact CONSORT-style study schematic (ITT N=416; 2:1 randomization; arms; endpoints).</p>
+                    
+
+                    
+
+                </div>
+                
+                <div class="col-span-1 flex flex-col gap-4">
+
+                    
+                    <div
+                        class="bg-white p-6 rounded-xl border border-gray-100 shadow-sm h-full flex flex-col justify-center">
+                        <div class="prose prose-lg text-gray-700 leading-snug">
+                            <p><b>Population (key eligibility):</b> adults <b>18–75 years</b> with mCRC and <b>ECOG PS 0–1</b>; <b>progression during/after</b> prior fluoropyrimidine-, oxaliplatin-, or irinotecan-based chemotherapy; <b>no prior VEGFR inhibitor</b> therapy.<sup>1,2</sup></p>
+                        </div>
+                    </div>
+
+                    
+
+                </div>
+                
+                <div class="col-span-1 flex flex-col gap-4">
+
+                    
+                    <div class="bg-white p-6 rounded-xl border border-gray-100 shadow-sm h-full">
+                        <ul class="space-y-3">
+                            
+                            <li class="flex items-start gap-3">
+                                <span class="text-primary mt-1.5">•</span>
+                                <span class="text-gray-800 text-lg"><b>Stratification factors:</b> prior VEGF inhibitor therapy (yes vs no)<sup>2</sup></span>
+                            </li>
+                            
+                            <li class="flex items-start gap-3">
+                                <span class="text-primary mt-1.5">•</span>
+                                <span class="text-gray-800 text-lg"><b>Stratification factors:</b> <i>K-RAS</i> mutational status (wild type vs mutant)<sup>2</sup></span>
+                            </li>
+                            
+                        </ul>
+                    </div>
+                    
+
+                </div>
+                
+                <div class="col-span-1 flex flex-col gap-4">
+
+                    
+                    <div
+                        class="bg-white p-6 rounded-xl border border-gray-100 shadow-sm h-full flex flex-col justify-center">
+                        <div class="prose prose-lg text-gray-700 leading-snug">
+                            <p><b>Intervention:</b> fruquintinib <b>5 mg PO QD</b> + BSC on a <b>3-weeks-on/1-week-off</b> schedule (28-day cycle). Treatment continued until <b>progression</b>, <b>death</b>, <b>unacceptable toxicity</b>, or <b>withdrawal</b>.<sup>1,2</sup></p>
+                        </div>
+                    </div>
+
+                    
+
+                </div>
+                
+                <div class="col-span-1 flex flex-col gap-4">
+
+                    
+                    <div
+                        class="bg-white p-6 rounded-xl border border-gray-100 shadow-sm h-full flex flex-col justify-center">
+                        <div class="prose prose-lg text-gray-700 leading-snug">
+                            <p><b>Control:</b> <b>placebo + BSC</b> on the same <b>3-weeks-on/1-week-off</b> schedule (28-day cycle).<sup>1,2</sup></p>
+                        </div>
+                    </div>
+
+                    
+
+                </div>
+                
+                <div class="col-span-2 flex flex-col gap-4">
+
+                    
+                    <div
+                        class="bg-white p-6 rounded-xl border border-gray-100 shadow-sm h-full flex flex-col justify-center">
+                        <div class="prose prose-lg text-gray-700 leading-snug">
+                            <p><b>Endpoints hierarchy:</b> <b>Primary endpoint: Overall survival (OS)</b>.<sup>1,2</sup> Key secondary endpoints included <b>PFS</b>, <b>objective response rate</b>, <b>disease control rate</b>, <b>duration of response</b>, and <b>safety</b>.<sup>1,2</sup></p>
+                        </div>
+                    </div>
+
+                    
+
+                </div>
+                
+                <div class="col-span-2 flex flex-col gap-4">
+
+                    
+                    <div
+                        class="bg-white p-6 rounded-xl border border-gray-100 shadow-sm h-full flex flex-col justify-center">
+                        <div class="prose prose-lg text-gray-700 leading-snug">
+                            <p><b>Assessments:</b> Tumor assessments and safety monitoring were performed per protocol throughout treatment until discontinuation; survival follow-up continued for OS.<sup>2</sup></p><p><i>*The FRESCO study was conducted in China.</i><sup>1,2</sup></p>
+                        </div>
+                    </div>
+
+                    
+
+                </div>
+                
+
+            </div>
+
+            <!-- Footer/References -->
+            
+            <div class="shrink-0 border-t border-gray-100 pt-3 mt-auto">
+                <p class="text-[10px] text-gray-400">
+                    References: 1. FRUZAQLA. Prescribing Information. Takeda Pharmaceuticals America, Inc; 2025.
+2. Li J, Qin S, Xu R, et al. Effect of fruquintinib vs placebo on overall survival in patients with previously treated metastatic colorectal cancer: the FRESCO randomized clinical trial. JAMA. 2018;319(24):2486-2496. doi:10.1001/jama.2018.7855.
+                </p>
+            </div>
+            
+
+        </div>
+    </div>
+    
+    <div class="slide-container" id="slide-3">
+        <!-- Navbar -->
+        <div class="w-full bg-white border-b border-gray-200 px-8 py-4 flex items-center justify-between shrink-0">
+            <div class="flex items-center gap-6 overflow-x-auto no-scrollbar">
+                <!-- Logo -->
+                <img src="https://www.fruzaqlahcp.com/sites/default/files/2024-04/fruzaqla_logo_r_rgb.png"
+                    alt="Brand Logo" class="h-10 mr-4">
+
+                <!-- Nav Tabs -->
+                
+                <div
+                    class="whitespace-nowrap uppercase text-sm cursor-pointer px-3 py-1 text-secondary opacity-70 hover:opacity-100">
+                    MOA
+                </div>
+                
+                <div
+                    class="whitespace-nowrap uppercase text-sm cursor-pointer px-3 py-1 text-secondary opacity-70 hover:opacity-100">
+                    STUDY DESIGN
+                </div>
+                
+                <div
+                    class="whitespace-nowrap uppercase text-sm cursor-pointer px-3 py-1 text-secondary nav-active">
+                    EFFICACY
+                </div>
+                
+                <div
+                    class="whitespace-nowrap uppercase text-sm cursor-pointer px-3 py-1 text-secondary opacity-70 hover:opacity-100">
+                    SAFETY
+                </div>
+                
+                <div
+                    class="whitespace-nowrap uppercase text-sm cursor-pointer px-3 py-1 text-secondary opacity-70 hover:opacity-100">
+                    DOSING
+                </div>
+                
+            </div>
+            <div class="text-xs text-gray-400 font-mono">SLIDE 3</div>
+        </div>
+
+        <!-- Slide Content Area -->
+        <div class="flex-1 p-10 flex flex-col gap-6">
+
+            <!-- Header -->
+            <div class="shrink-0">
+                <h3 class="text-primary text-sm font-bold tracking-widest uppercase mb-1">FRESCO: PRIMARY ENDPOINT (OS) + SUPPORTIVE SECONDARY EFFICACY (PFS/ORR/DCR)</h3>
+                <h1 class="text-secondary text-4xl font-extrabold leading-tight w-3/4">FRUZAQLA IMPROVES OVERALL SURVIVAL IN FRESCO WITH CONSISTENT TIME-TO-EVENT BENEFIT</h1>
+            </div>
+
+            <!-- Content Grid (Dynamic Layout) -->
+            <div class="flex-1 grid gap-8 grid-cols-2">
+
+                
+                <div class="col-span-1 flex flex-col gap-4">
+
+                    
+                    <div
+                        class="bg-white p-6 rounded-xl border border-gray-100 shadow-sm h-full flex flex-col justify-center">
+                        <div class="prose prose-lg text-gray-700 leading-snug">
+                            <p><b>Primary endpoint (OS):</b> Add the FRESCO overall survival results here (median OS for FRUZAQLA + BSC vs placebo + BSC, <b>HR</b>, <b>95% CI</b>, and <b>p</b>-value), with Kaplan–Meier callouts highlighting curve separation and durability over follow-up.</p><p><b>Clinical interpretation:</b> Taken together with supportive secondary endpoints, FRUZAQLA demonstrates a <b>balanced efficacy profile</b> for later-line mCRC—meaningful time-to-event improvement (OS and PFS) with a regimen intended for sustained disease control alongside best supportive care.</p>
+                        </div>
+                    </div>
+
+                    
+
+                </div>
+                
+                <div class="col-span-1 flex flex-col gap-4">
+
+                    
+                    <div
+                        class="bg-white p-6 rounded-xl border border-gray-100 shadow-sm h-full flex flex-col justify-center">
+                        <div class="prose prose-lg text-gray-700 leading-snug">
+                            <p><b>Key secondary efficacy (PFS):</b> Median PFS <b>3.7 months</b> (95% CI: 3.7–4.6) with FRUZAQLA + BSC vs <b>1.8 months</b> (95% CI: 1.8–1.8) with placebo + BSC; <b>HR 0.26</b> (95% CI: 0.21–0.34), consistent with an early and sustained separation of the time-to-event curves.</p><p><b>ORR/DCR:</b> Insert FRESCO response endpoints (ORR and DCR) to contextualize disease control alongside the observed survival and PFS gains.</p><p><b>Statistical note:</b> PFS <em>p</em>-value not shown because the analysis was not multiplicity-adjusted; statistical significance is not implied for that endpoint.</p>
+                        </div>
+                    </div>
+
+                    
+
+                </div>
+                
+                <div class="col-span-2 flex flex-col gap-4">
+
+                    
+                    <div
+                        class="h-full w-full flex items-center justify-center bg-gray-50 rounded-xl overflow-hidden relative border border-gray-100">
+                        <img src="https://solstice-public-forever.s3.us-east-1.amazonaws.com/9729d2c2-cbd8-41ec-a2e3-ca756068844e/4365752f-8ac4-408b-9224-7092106e186d.png" alt="Visual" class="max-h-full max-w-full object-contain">
+                    </div>
+                    
+                    <p class="text-xs text-gray-500 mt-1 italic text-center">FRESCO Kaplan–Meier curve: Progression-free survival (PFS)</p>
+                    
+
+                    
+
+                </div>
+                
+
+            </div>
+
+            <!-- Footer/References -->
+            
+            <div class="shrink-0 border-t border-gray-100 pt-3 mt-auto">
+                <p class="text-[10px] text-gray-400">
+                    References: FRESCO trial (fruquintinib + best supportive care [BSC] vs placebo + BSC) in previously treated metastatic colorectal cancer (mCRC). See slide source figures for full methodology and statistical hierarchy.
+                </p>
+            </div>
+            
+
+        </div>
+    </div>
+    
+    <div class="slide-container" id="slide-4">
+        <!-- Navbar -->
+        <div class="w-full bg-white border-b border-gray-200 px-8 py-4 flex items-center justify-between shrink-0">
+            <div class="flex items-center gap-6 overflow-x-auto no-scrollbar">
+                <!-- Logo -->
+                <img src="https://www.fruzaqlahcp.com/sites/default/files/2024-04/fruzaqla_logo_r_rgb.png"
+                    alt="Brand Logo" class="h-10 mr-4">
+
+                <!-- Nav Tabs -->
+                
+                <div
+                    class="whitespace-nowrap uppercase text-sm cursor-pointer px-3 py-1 text-secondary opacity-70 hover:opacity-100">
+                    MOA
+                </div>
+                
+                <div
+                    class="whitespace-nowrap uppercase text-sm cursor-pointer px-3 py-1 text-secondary opacity-70 hover:opacity-100">
+                    STUDY DESIGN
+                </div>
+                
+                <div
+                    class="whitespace-nowrap uppercase text-sm cursor-pointer px-3 py-1 text-secondary opacity-70 hover:opacity-100">
+                    EFFICACY
+                </div>
+                
+                <div
+                    class="whitespace-nowrap uppercase text-sm cursor-pointer px-3 py-1 text-secondary nav-active">
+                    SAFETY
+                </div>
+                
+                <div
+                    class="whitespace-nowrap uppercase text-sm cursor-pointer px-3 py-1 text-secondary opacity-70 hover:opacity-100">
+                    DOSING
+                </div>
+                
+            </div>
+            <div class="text-xs text-gray-400 font-mono">SLIDE 4</div>
+        </div>
+
+        <!-- Slide Content Area -->
+        <div class="flex-1 p-10 flex flex-col gap-6">
+
+            <!-- Header -->
+            <div class="shrink-0">
+                <h3 class="text-primary text-sm font-bold tracking-widest uppercase mb-1">SAFETY / TOLERABILITY (FRESCO)</h3>
+                <h1 class="text-secondary text-4xl font-extrabold leading-tight w-3/4">PREDICTABLE, MANAGEABLE SAFETY PROFILE IN FRESCO</h1>
+            </div>
+
+            <!-- Content Grid (Dynamic Layout) -->
+            <div class="flex-1 grid gap-8 grid-cols-2">
+
+                
+                <div class="col-span-1 flex flex-col gap-4">
+
+                    
+                    <div
+                        class="bg-white p-6 rounded-xl border border-gray-100 shadow-sm h-full flex flex-col justify-center">
+                        <div class="prose prose-lg text-gray-700 leading-snug">
+                            <p>In FRESCO, the majority of adverse reactions (ARs) with FRUZAQLA were described as <strong>predictable</strong> (consistent with VEGF/VEGFR pathway inhibition) and <strong>manageable</strong>.<sup>1–3</sup> <span style="color:#6b7280;">Despite predictability, individual patient experiences may vary.</span></p><p><strong>Serious ARs</strong> occurred in <strong>15%</strong> of patients treated with FRUZAQLA + BSC; serious ARs in <strong>≥2%</strong> included <strong>intestinal obstruction (2.9%)</strong> and <strong>hemorrhage (2.2%)</strong>.<sup>1</sup> <strong>Fatal ARs</strong> occurred in <strong>2.5%</strong> (7 patients).<sup>1</sup></p>
+                        </div>
+                    </div>
+
+                    
+
+                </div>
+                
+                <div class="col-span-1 flex flex-col gap-4">
+
+                    
+                    <div
+                        class="h-full w-full flex items-center justify-center bg-gray-50 rounded-xl overflow-hidden relative border border-gray-100">
+                        <img src="https://www.fruzaqlahcp.com/sites/default/files/2024-02/3.2-ar-table-1-desk_0.svg" alt="Visual" class="max-h-full max-w-full object-contain">
+                    </div>
+                    
+                    <p class="text-xs text-gray-500 mt-1 italic text-center">Adverse reactions occurring in ≥10% of patients (FRESCO).<sup>1</sup></p>
+                    
+
+                    
+
+                </div>
+                
+                <div class="col-span-1 flex flex-col gap-4">
+
+                    
+                    <div class="bg-white p-6 rounded-xl border border-gray-100 shadow-sm h-full">
+                        <ul class="space-y-3">
+                            
+                            <li class="flex items-start gap-3">
+                                <span class="text-primary mt-1.5">•</span>
+                                <span class="text-gray-800 text-lg"><strong>Hypertension:</strong> 61% all grades; <strong>23%</strong> grade 3/4 (vs 17% all grades; 2.2% grade 3/4 with placebo + BSC).<sup>1</sup></span>
+                            </li>
+                            
+                            <li class="flex items-start gap-3">
+                                <span class="text-primary mt-1.5">•</span>
+                                <span class="text-gray-800 text-lg"><strong>PPES/hand–foot skin reaction:</strong> 49% all grades; <strong>11%</strong> grade 3/4 (vs 2.9%; 0%).<sup>1</sup></span>
+                            </li>
+                            
+                            <li class="flex items-start gap-3">
+                                <span class="text-primary mt-1.5">•</span>
+                                <span class="text-gray-800 text-lg"><strong>Proteinuria:</strong> 55% all grades; <strong>4.7%</strong> grade 3/4 (vs 30%; 0%).<sup>1</sup></span>
+                            </li>
+                            
+                            <li class="flex items-start gap-3">
+                                <span class="text-primary mt-1.5">•</span>
+                                <span class="text-gray-800 text-lg"><strong>Diarrhea:</strong> 25% all grades; <strong>3.6%</strong> grade 3/4 (vs 5%; 0%).<sup>1</sup></span>
+                            </li>
+                            
+                            <li class="flex items-start gap-3">
+                                <span class="text-primary mt-1.5">•</span>
+                                <span class="text-gray-800 text-lg"><strong>Fatigue:</strong> 25% all grades; <strong>2.5%</strong> grade 3/4 (vs 13%; 1.5%).<sup>1</sup></span>
+                            </li>
+                            
+                        </ul>
+                    </div>
+                    
+
+                </div>
+                
+                <div class="col-span-1 flex flex-col gap-4">
+
+                    
+                    <div
+                        class="h-full w-full flex items-center justify-center bg-gray-50 rounded-xl overflow-hidden relative border border-gray-100">
+                        <img src="https://solstice-public-forever.s3.us-east-1.amazonaws.com/d57e0f2f-44bc-4274-9f70-c99f017a9ec1/43868432-6924-4458-b8d6-ee2bf81e9b09.png" alt="Visual" class="max-h-full max-w-full object-contain">
+                    </div>
+                    
+                    <p class="text-xs text-gray-500 mt-1 italic text-center">Dose interruptions/reductions and discontinuations due to ARs (FRESCO).<sup>1,2</sup></p>
+                    
+
+                    
+
+                </div>
+                
+                <div class="col-span-2 flex flex-col gap-4">
+
+                    
+                    <div
+                        class="bg-white p-6 rounded-xl border border-gray-100 shadow-sm h-full flex flex-col justify-center">
+                        <div class="prose prose-lg text-gray-700 leading-snug">
+                            <div style="border:1px solid #d1d5db;border-radius:10px;padding:14px 16px;background:#f9fafb;"><p style="margin:0 0 8px 0;"><strong>Clinical management principles (monitoring + early intervention)</strong></p><ul style="margin:0;padding-left:18px;"><li><strong>Baseline and on-treatment monitoring:</strong> check blood pressure regularly; monitor urine protein per PI; assess for PPES/skin changes, diarrhea, fatigue, bleeding, and symptoms of GI obstruction/perforation risk.<sup>1</sup></li><li><strong>Prompt supportive care:</strong> initiate/optimize antihypertensives; early skin care and activity modifications for PPES; antidiarrheals and hydration for diarrhea; evaluate and manage fatigue contributors.</li><li><strong>Dose modification when needed:</strong> use <strong>dose interruptions and/or reductions</strong> to manage tolerability; discontinue for severe or life-threatening toxicity per PI.<sup>1</sup></li><li><strong>Escalate for serious events:</strong> urgently evaluate suspected hemorrhage, thromboembolic/ischemic events, severe infection, or GI obstruction; manage per standard of care and PI guidance.<sup>1</sup></li></ul></div>
+                        </div>
+                    </div>
+
+                    
+
+                </div>
+                
+
+            </div>
+
+            <!-- Footer/References -->
+            
+            <div class="shrink-0 border-t border-gray-100 pt-3 mt-auto">
+                <p class="text-[10px] text-gray-400">
+                    References: <p><strong>1.</strong> FRUZAQLA. Prescribing Information. Takeda Pharmaceuticals America, Inc; 2025.<br/><strong>2.</strong> Li J, Qin S, Xu R, et al. Effect of fruquintinib vs placebo on overall survival in patients with previously treated metastatic colorectal cancer: the FRESCO randomized clinical trial. <em>JAMA</em>. 2018;319(24):2486-2496. doi:10.1001/jama.2018.7855<br/><strong>3.</strong> NIH National Cancer Institute, National Institutes of Health. Angiogenesis inhibitors. Updated April 2, 2018. January 8, 2023. https://www.cancer.gov/about-cancer/treatment/types/immunotherapy/angiogenesis-inhibitors-fact-sheet#why-is-angiogenesis-important-in-cancer</p>
+                </p>
+            </div>
+            
+
+        </div>
+    </div>
+    
+    <div class="slide-container" id="slide-5">
+        <!-- Navbar -->
+        <div class="w-full bg-white border-b border-gray-200 px-8 py-4 flex items-center justify-between shrink-0">
+            <div class="flex items-center gap-6 overflow-x-auto no-scrollbar">
+                <!-- Logo -->
+                <img src="https://www.fruzaqlahcp.com/sites/default/files/2024-04/fruzaqla_logo_r_rgb.png"
+                    alt="Brand Logo" class="h-10 mr-4">
+
+                <!-- Nav Tabs -->
+                
+                <div
+                    class="whitespace-nowrap uppercase text-sm cursor-pointer px-3 py-1 text-secondary opacity-70 hover:opacity-100">
+                    MOA
+                </div>
+                
+                <div
+                    class="whitespace-nowrap uppercase text-sm cursor-pointer px-3 py-1 text-secondary opacity-70 hover:opacity-100">
+                    STUDY DESIGN
+                </div>
+                
+                <div
+                    class="whitespace-nowrap uppercase text-sm cursor-pointer px-3 py-1 text-secondary opacity-70 hover:opacity-100">
+                    EFFICACY
+                </div>
+                
+                <div
+                    class="whitespace-nowrap uppercase text-sm cursor-pointer px-3 py-1 text-secondary opacity-70 hover:opacity-100">
+                    SAFETY
+                </div>
+                
+                <div
+                    class="whitespace-nowrap uppercase text-sm cursor-pointer px-3 py-1 text-secondary nav-active">
+                    DOSING
+                </div>
+                
+            </div>
+            <div class="text-xs text-gray-400 font-mono">SLIDE 5</div>
+        </div>
+
+        <!-- Slide Content Area -->
+        <div class="flex-1 p-10 flex flex-col gap-6">
+
+            <!-- Header -->
+            <div class="shrink-0">
+                <h3 class="text-primary text-sm font-bold tracking-widest uppercase mb-1">DOSING & DOSE MODIFICATION (SELECT ARs) | LATER-LINE mCRC</h3>
+                <h1 class="text-secondary text-4xl font-extrabold leading-tight w-3/4">OPTIMIZE FRUZAQLA TOLERABILITY WITH PROACTIVE DOSE HOLDS & STEP-DOWN RESUMPTION</h1>
+            </div>
+
+            <!-- Content Grid (Dynamic Layout) -->
+            <div class="flex-1 grid gap-8 grid-cols-2">
+
+                
+                <div class="col-span-1 flex flex-col gap-4">
+
+                    
+                    <div
+                        class="bg-white p-6 rounded-xl border border-gray-100 shadow-sm h-full flex flex-col justify-center">
+                        <div class="prose prose-lg text-gray-700 leading-snug">
+                            <p><b>Administration & monitoring focus:</b> use structured toxicity checks to support sustained therapy in later-line mCRC.</p><p><b>Practical monitoring checklist (clinic + home):</b><br><b>BP:</b> baseline and regularly during treatment; encourage home BP log.<br><b>Urine protein:</b> baseline and periodically; escalate to 24-hour urine when indicated.<br><b>Skin:</b> routine hand/foot skin checks for early HFSR; reinforce emollients and friction avoidance.<br><b>GI symptoms:</b> assess stool frequency/volume and hydration status; intervene early for diarrhea.</p><p><b>Brief patient counseling points:</b> report new/worsening fatigue, abdominal pain, dark urine/jaundice, foamy urine/edema, persistent diarrhea, or painful hand/foot skin changes promptly; early reporting enables dose holds/reductions and may help maintain time on therapy.</p>
+                        </div>
+                    </div>
+
+                    
+
+                </div>
+                
+                <div class="col-span-1 flex flex-col gap-4">
+
+                    
+                    <div class="bg-white p-6 rounded-xl border border-gray-100 shadow-sm h-full">
+                        <ul class="space-y-3">
+                            
+                            <li class="flex items-start gap-3">
+                                <span class="text-primary mt-1.5">•</span>
+                                <span class="text-gray-800 text-lg">Dose modification approach: withhold for clinically significant toxicity, then resume at the next lower dose level when resolved per guidance.</span>
+                            </li>
+                            
+                            <li class="flex items-start gap-3">
+                                <span class="text-primary mt-1.5">•</span>
+                                <span class="text-gray-800 text-lg">Key AR schema to operationalize in practice: hypertension, HFSR, proteinuria, diarrhea (monitor early; intervene promptly; consider temporary interruption and dose reduction as needed).</span>
+                            </li>
+                            
+                            <li class="flex items-start gap-3">
+                                <span class="text-primary mt-1.5">•</span>
+                                <span class="text-gray-800 text-lg">Escalate evaluation for signs of hepatic injury (LFTs, bilirubin) and renal injury (proteinuria workup) per thresholds in prescribing guidance.</span>
+                            </li>
+                            
+                        </ul>
+                    </div>
+                    
+
+                </div>
+                
+                <div class="col-span-2 flex flex-col gap-4">
+
+                    
+                    <div
+                        class="h-full w-full flex items-center justify-center bg-gray-50 rounded-xl overflow-hidden relative border border-gray-100">
+                        <img src="dosingguide.pdf#polygon=[[0.4705, 1.631], [6.0739, 1.631], [6.0739, 6.066], [0.4705, 6.066]]" alt="Visual" class="max-h-full max-w-full object-contain">
+                    </div>
+                    
+                    <p class="text-xs text-gray-500 mt-1 italic text-center">Dose modification table (hepatotoxicity and proteinuria).</p>
+                    
+
+                    
+
+                </div>
+                
+                <div class="col-span-2 flex flex-col gap-4">
+
+                    
+                    <div
+                        class="bg-white p-6 rounded-xl border border-gray-100 shadow-sm h-full flex flex-col justify-center">
+                        <div class="prose prose-lg text-gray-700 leading-snug">
+                            <p><sup>a</sup>Severity as defined by <b>NCI CTCAE v5.0</b>. ALT=alanine aminotransferase; AST=aspartate aminotransferase; TB=total bilirubin; ULN=upper limit of normal.</p>
+                        </div>
+                    </div>
+
+                    
+
+                </div>
+                
+
+            </div>
+
+            <!-- Footer/References -->
+            
+            <div class="shrink-0 border-t border-gray-100 pt-3 mt-auto">
+                <p class="text-[10px] text-gray-400">
+                    References: FRUZAQLA (fruquintinib) Prescribing Information; NCI CTCAE v5.0.
+                </p>
+            </div>
+            
+
+        </div>
+    </div>
+    
+
+</body>
+
+</html>

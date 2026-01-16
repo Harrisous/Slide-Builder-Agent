@@ -1,0 +1,18 @@
+from typing import TypedDict, List, Dict, Optional, Annotated
+import operator
+
+class SlidePlan(TypedDict):
+    slide_id: int
+    title: str
+    search_queries: List[str]
+    key_message: str
+
+class AgentState(TypedDict):
+    query: str
+    global_plan: List[SlidePlan]
+    layout_spec: Dict[str, str]
+    retrieved_docs: Dict[int, List[Dict]]  # Mapping slide_id -> list of group data
+    used_group_ids: Annotated[List[str], operator.add] # Append-only list of used groups
+    html_output: str
+    feedback: str
+    revision_count: int
