@@ -20,7 +20,7 @@ Final Deliverable
 
 Logistics
 -	You will be given:
--	OpenAI API key (in Appendix below) as well as API keys for any other commercial LLM you would like upon request
+-	OpenAI API key (configure through environment; see Appendix below) as well as API keys for any other commercial LLM you would like upon request
 -	The inputs described above (clinical papers, prior approved content, and style guide)
 -	Pinecone API key or API key to any other VectorDB (if needed)
 -	Anything else you need
@@ -39,10 +39,13 @@ Evaluation Criteria
 
 Appendix (Keys and Example Slides)
 
-API KEYS:
-OPENAI_API_KEY: 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
+API CONFIGURATION:
 
-PINECONE_API_KEY: pcsk_6xCFMX_EFxJCpnVjGj2irxnF9u6Em74vA8WLrvxfSKej24GrZAYpzw7dw9K2PjezKrrPSh
+Use authorized credentials through environment variables or an untracked `.env` file (see `.env.example`). Never commit credentials. Previously published credentials must be revoked by their owning provider accounts; removing them from this file does not invalidate them.
+
+OPENAI_API_KEY: configure via environment; no credential is stored here.
+
+PINECONE_API_KEY: configure via environment; no credential is stored here.
 
 PINECONE INDEX NAMES: 
 -> content-gen-group-index
